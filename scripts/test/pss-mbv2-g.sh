@@ -1,0 +1,15 @@
+python train.py \
+--dataset_dir [DATASET_DIR] \
+--job_dir [JOB_DIR] \
+--model_name mobilenet_v2 \
+--gpu_ids 0 1 2 3 \
+--batch_size 1024 \
+--epochs 250 \
+--infer_metric_types latency_gpu \
+--infer_metric_target_range_starts 100 \
+--infer_metric_target_range_stops 270 \
+--infer_metric_target_steps 10 \
+--gen_map_num 1000000 \
+--lut_dirs lut/mbv2_gpu.pkl \
+--resume [RESUME] \
+--test_only
